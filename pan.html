@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .PAN {
+            text-transform: uppercase;
+        }
+        .error {
+            color: Red;
+            visibility: hidden;
+        }
+        .valid {
+            color: rgb(52, 240, 52);
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <input name="txtPANCard" type="text" id="txtPANCard" class="PAN" />
+    <span id="lblPANError" class="error">Invalid PAN Number</span>
+    <span id="lblPANValid" class="valid">Valid PAN Number</span>
+    
+    <hr />
+    <input type="button" id="btnSubmit" value="Submit" onclick="ValidatePAN()" />
+
+    <script type="text/javascript">
+        function ValidatePAN() {
+            var txtPANCard = document.getElementById("txtPANCard");
+            var lblPANError = document.getElementById("lblPANError");
+            var lblPANValid = document.getElementById("lblPANValid");
+            var regex = /([A-Z]){5}([0-9]){4}([A-Z]){1}$/;
+            if (regex.test(txtPANCard.value.toUpperCase())) {
+                lblPANError.style.visibility = "hidden";lblPANValid.style.visibility = "visible";
+                return true;
+            } else {
+                lblPANError.style.visibility = 'visible';lblPANValid.style.visibility = 'hidden';
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

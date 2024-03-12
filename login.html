@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="loginstyle.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>Tax  Portal </title>
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form method="post" action="http://localhost/store.php">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" id="username" name="username"  placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date"    placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" id="useremail"  name="useremail"  placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Age:</label>
+                            <input type="text" id="userage" name="userage"  placeholder="Enter your age" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="text" id="userpassword"  name="userpassword"  placeholder="Enter password" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select id="usergender" name="usergender" required>
+                                <option disabled selected>Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text" placeholder="Enter your ccupation" required>
+                        </div>
+                                <div class="input-field">
+                                    <label>PAN</label>
+                                    <input name="pannum" id="pannum"  placeholder="Enter PAN no" type="text" style="text-transform: uppercase;" required/>
+                                </div>
+                        
+                                <div class="input-field" style="position: relative; top: 0.5rem;">
+                                    <input type="button" id="btnSubmit" value="Confirm PAN" onclick="var pannum = document.getElementById('pannum'); var lblPANError = document.getElementById('lblPANError'); var lblPANValid = document.getElementById('lblPANValid'); var regex = /([A-Z]){5}([0-9]){4}([A-Z]){1}$/; if (regex.test(pannum.value.toUpperCase())) { lblPANError.style.visibility = 'hidden';lblPANValid.style.visibility = 'visible'; return true; } else { lblPANError.style.visibility = 'visible'; lblPANValid.style.visibility='hidden'; return false; }" />
+                                </div>
+                        
+                                <span id="lblPANError" class="error">Invalid PAN Number</span>
+                                <span id="lblPANValid" class="valid">Valid PAN Number</span>
+
+                        <button class="nextBtn" type="submit">
+                            <span class="btnText">Next</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+    <script src="loginjs.js"></script>
+    
+</body>
+</html>

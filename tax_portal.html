@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tax Collection</title>
+</head>
+<body>
+    <h1>Tax Collection</h1>
+    <form method="post" action="http://localhost/store.php">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="userage">User Age:</label>
+        <input type="text" id="userage" name="userage" required><br><br>
+
+        <label for="usergender">User Gender:</label>
+        <select id="usergender" name="usergender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+        </select><br><br>
+
+        <label for="totalincome">Total Income:</label>
+        <input type="text" id="totalincome" name="totalincome" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

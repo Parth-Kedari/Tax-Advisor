@@ -1,0 +1,52 @@
+ /* Add some basic styles for the navigation bar */
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #4070f4;
+    overflow: hidden;
+    text-align: right; /* Align text to the right */
+}
+
+.navbar a {
+    font-size: 16px;
+    color: rgb(254, 254, 254);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right; /* Float the buttons to the right */
+}
+
+.navbar a.menu {
+    float: left; /* Float only the "Menu" link to the left */
+}
+
+.navbar a:hover {
+    background-color: #1236db;
+    color: black;
+}
+
+/* Add styles for the sliding window */
+.sliding-window {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden to the left */
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    overflow-y: auto;
+    transition: left 0.3s; /* Add a smooth transition effect */
+}
+
+/* Style for the close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
