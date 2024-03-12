@@ -1,4 +1,4 @@
-# Tax-Advisor
+# Database Management System project / DBMS -- Tax advisor
 
 A Website where u can get Product suggestion based on your income which will remain after deducting tax. 
 It create a basic recipt where u can see your tax recipt. 
